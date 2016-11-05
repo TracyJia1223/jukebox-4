@@ -1,0 +1,91 @@
+/*.page-header {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}*/
+
+#filter-library {
+  float: right;
+  width: 200px;
+  position: relative;
+  top: 5px;
+}
+
+ul {
+  list-style:none;
+  padding-left: 0;
+  min-height: 150px;
+  border: 2px dashed #282828;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+li {
+  border-color: #282828;
+  margin-bottom: 20px;
+  background-color: #222222;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+li:hover {
+  background-color: lightgrey;
+}
+
+li .fa-bars {
+  margin-right: 10px;
+  cursor: move;
+  transition:
+}
+
+li .fa-trash {
+  float: right;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+  opacity: 0.3;
+}
+
+li .fa-trash:hover {
+  opacity: 1;
+}
+
+li .notes {
+  margin-left: 22px;
+  margin-top: 10px;
+  display: block;
+  background-color: #444;
+  color: #999;
+  padding: 5 12px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.alert {
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+}
+
+/* Add Your Styles Here */
