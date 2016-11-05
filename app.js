@@ -6,7 +6,7 @@ var LIBRARY = [
   {title: 'Yankee Doodle', notes: 'C F*4 C F*4 B C D A*2 B*2 A B*2 C' },
   {title: 'Descending Notes', notes: 'G F E D C B A G F E D C B A' }
 ];
-helper : 'clone'
+
 var BPM = 600;
 
 // Add a song with the given title and notes to the library.
@@ -45,6 +45,7 @@ var playAll = function() {
 
       // Fade out the message.
       $('#message').fadeOut();
+      $('.page-header').css('animation-iteration-count', '0');
       return;
     }
 
@@ -74,9 +75,11 @@ $(document).ready(function() {
   // Play all songs in the playlist when the "play" button is clicked.
   $('#play-button').on('click', function() {
     if ($('#playlist-list').children().length > 0) {
+      $('.page-header').css('animation-iteration-count', 'infinite');
       playAll();
     } else {
       $("#play-button").effect( "shake", {times:4}, 1000 );
+      // $("#play-button").toggleClass('button_shake');
     }
   });
 

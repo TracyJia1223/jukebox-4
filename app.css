@@ -1,10 +1,30 @@
-/*.page-header {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+.page-header {
+  animation: spin 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+
+  animation-iteration-count:0;
 }
 
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spin {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
 
 @keyframes shake {
   10%, 90% {
@@ -19,7 +39,11 @@
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-}*/
+}
+
+.button_shake {
+  animation: shake 1s;
+}
 
 #filter-library {
   float: right;
